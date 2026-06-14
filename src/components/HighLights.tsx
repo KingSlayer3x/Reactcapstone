@@ -22,6 +22,7 @@ export default function HighLights(){
                         />
                     ))}
                 </div>
+                
             </div>
         </main>
     )

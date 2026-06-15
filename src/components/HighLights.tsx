@@ -3,7 +3,7 @@ import { card } from "../utils/carddata";
 
 export default function HighLights(){
     return (
-        <main className="h-150">
+        <main className="">
             <div className="flex flex-wrap pt-25 justify-around mb-20 items-center">
                 <h1 className="font-markazi text-6xl">This Week Specials!</h1>
                 <button className="w-52 p-4 cursor-pointer hover:bg-amber-400 transition-colors rounded-2xl bg-[#F4CE14]">
@@ -22,7 +22,6 @@ export default function HighLights(){
                         />
                     ))}
                 </div>
-                
             </div>
         </main>
     )

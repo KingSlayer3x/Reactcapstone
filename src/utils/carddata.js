@@ -6,7 +6,7 @@ export const card = [
         price: '25$',
         desc: 'Lorem ipsum dolor, sit amet con adipisicing elit. Autem error laborum commodi? Vero, qui neque ne', deliver: 'Ask for a delivery'},        
     {   id: 2,
-        image: "./bruchetta.svg",
+        image: "./bruchetta.jpg",
         title: "bruchetta",
         price: '18$',
         desc: 'Lorem ipsum dolor, sit amet con adipisicing elit. Autem error laborum commodi? Vero, qui neque ne', deliver: 'Ask for a delivery'},

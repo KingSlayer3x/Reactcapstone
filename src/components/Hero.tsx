@@ -1,6 +1,6 @@
 export default function Hero(){
     return (
-        <section className="bg-[#495E57] w-full h-120">
+        <section className="bg-[#495E57] w-full h">
             <div className="flex flex-col md:flex-row justify-around items-center flex-wrap">
                 <div className="w-80">
                     <div className="flex flex-col justify-between">
@@ -15,7 +15,7 @@ export default function Hero(){
                         </button>
                     </div>
                 </div>
-                <div className="w-80">
+                <div className="w-100">
                     <img src="./restauranfood.jpg" className="mt-10 hidden md:block rounded-4xl max-w-full h-auto" alt="food-image" />
                 </div>
             </div>

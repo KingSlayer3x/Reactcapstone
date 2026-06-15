@@ -1,13 +1,14 @@
 import Navbar from "./components/nav";
-import Hero from "./components/Hero";
-import HighLights from "./components/HighLights";
+import { Route, Routes } from "react-router-dom";
+import Home from "./components/Home";
 export default function Root(){
     return(
         <div className="">
         <Navbar />
-        <Hero />
-        <HighLights />
-        
+        <Routes>
+            <Route path="/" element={<Home />}/>
+
+        </Routes>
         </div>
     )
 }

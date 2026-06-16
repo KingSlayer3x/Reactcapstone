@@ -10,8 +10,8 @@ export default function HighLights(){
                     <h2 className="text-2xl font-karla">Online Menu</h2>
                 </button>
             </div>
-            <div className="flex">
-                <div className="flex flex-col md:flex-row mx-auto">
+            <div className=" w-max mx-auto">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3">
                     {   card.map((item) => (
                         <Card
                             key={item.title}

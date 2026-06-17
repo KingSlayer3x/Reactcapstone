@@ -5,7 +5,7 @@ import { Logo } from "./Logo";
 export default function Navbar(){
     const [ isOpen, setIsOpen ] = useState(false);
     return(
-        <header className="sticky top-0 bg-white">
+        <header className="sticky top-0 bg-white z-10 shadow-2xl">
             <nav className=" flex justify-around items-center py-4">
                 <div className="shrink-0">
                     <Logo />

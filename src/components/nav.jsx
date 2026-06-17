@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { navLinks } from "../utils/data";
 import { FiList, FiX } from "react-icons/fi";
 import { Logo } from "./Logo";
+import { Link } from "react-router-dom";
 export default function Navbar(){
     const [ isOpen, setIsOpen ] = useState(false);
     return(
@@ -14,9 +15,9 @@ export default function Navbar(){
                     <ul className="flex space-x-6">
                         {navLinks.map((link, index) => (
                             <li key={index} className="hover:scale-110 transition-all">
-                                <a href={link.href} className="hover:text-gray-600">
+                                <Link to={link.href} className="hover:text-gray-600">
                                     {link.name}
-                                </a>
+                                </Link>
                             </li>
                         ))}
                     </ul>
@@ -31,9 +32,9 @@ export default function Navbar(){
                     <ul className="flex flex-col space-y-4 bg-gray-200 rounded shadow p-3">
                         {navLinks.map((link, index) => (
                             <li key={index} className="">
-                                <a href={link.href} className="block hover:text-gray-600" onClick={() => setIsOpen(false)}>
+                                <Link to={link.href} className="block hover:text-gray-600" onClick={() => setIsOpen(false)}>
                                     {link.name}
-                                </a>
+                                </Link>
                             </li>
                         ))}
                     </ul>

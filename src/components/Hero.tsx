@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Hero(){
     return (
         <section className="bg-[#495E57] w-full h">
@@ -11,7 +13,7 @@ export default function Hero(){
                             with a modern twist.
                         </p>
                         <button className="w-52 p-4 my-15 cursor-pointer hover:bg-amber-400 transition-colors rounded-2xl bg-[#F4CE14]">
-                            <h2 className="text-2xl font-karla">Reserve a Table</h2>
+                            <Link to="/BookingPage" className="text-2xl font-karla">Reserve a Table</Link>
                         </button>
                     </div>
                 </div>

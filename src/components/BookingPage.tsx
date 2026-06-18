@@ -27,11 +27,12 @@ export default function BookingPage() {
             ...form,
             numberOfGuests: Number(form.numberOfGuests),
         };
+        console.log(form)
     }
   return (
     <div>
         <form onSubmit={handleSubmit}>
-            <fieldset className='grid gap-2.5 md:w-max items-center mx-auto p-5 mt-7'>
+            <fieldset className='grid gap-2.5 md:w-max items-center mx-auto p-7 m-7'>
                 <legend className='text-center font-markazi text-7xl'>Book Your Table</legend>
                     <label htmlFor="date" className='font-karla text-4xl'>Date:</label>
                         <input className='font-markazi border-2' type="date" name='date' id='date' value={form.date} onChange={handleChange} />
@@ -45,7 +46,7 @@ export default function BookingPage() {
                             <option value="birthday" className='bg-amber-200'>Birthday</option>
                             <option value="anniversary" className='bg-amber-300'>Anniversary</option>
                         </select>
-                    <button  type='submit' className='text-4xl rounded-2xl bg-amber-200 p-3 w-max text-center hover:bg-amber-300 hover:border-2'>Book Now</button>
+                    <button  type='submit' disabled={!form.numberOfGuests} className='text-4xl rounded-2xl bg-amber-200 p-3 w-max text-center hover:bg-amber-300 hover:border-2'>Book Now</button>
             </fieldset>
         </form>
     </div>

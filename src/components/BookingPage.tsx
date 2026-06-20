@@ -24,29 +24,35 @@ export default function BookingPage({availableTimes, dispatch}: BookingPageProps
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement >) => {
         const { name, value } = e.target;
-
-        setForm((prev) => ({
-            ...prev,
-            [name] : value,
-        }));
-
-        if(name === 'date' || name === 'time'){
+        if(name === 'date'){
             dispatch({
                 type: 'UPDATE_TIMES',
                 payload: value
             });
-            // reset time when data changes avoiding invalid selections and this is optional
-            setForm(prev => ({...prev, time: ""}));
-        }
-    };
+            setForm(prev => ({
+                ...prev,
+                date: value,
+                time: ""
+            }));
+        } else {
+            setForm((prev) => ({
+                ...prev,
+                [name] : value,
+        }));
+    }
+};
+
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         const payload = {
             ...form,
             numberOfGuests: Number(form.numberOfGuests),
         };
-        console.log(payload);
-        setForm(initialState)
+        const success = (window as any).submitAPI(payload)
+        if(success){
+            console.log("Booking submitted successfully!")
+            setForm(initialState)
+        }
 
     }
   return (

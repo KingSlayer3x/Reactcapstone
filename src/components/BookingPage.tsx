@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { useNavigate } from 'react-router-dom';
 interface BookingForm {
         date: string;
         time: string;
@@ -21,7 +21,8 @@ export default function BookingPage({availableTimes, dispatch}: BookingPageProps
     
     const [form, setForm] = useState<BookingForm>(initialState);
 
-
+    const navigate = useNavigate();
+    
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement >) => {
         const { name, value } = e.target;
         if(name === 'date'){
@@ -50,8 +51,10 @@ export default function BookingPage({availableTimes, dispatch}: BookingPageProps
         };
         const success = (window as any).submitAPI(payload)
         if(success){
-            console.log("Booking submitted successfully!")
-            setForm(initialState)
+            // console.log("Booking submitted successfully!")
+            console.log(success,form);
+            navigate("/ConfirmedBooking");
+            // setForm(initialState)
         }
 
     }

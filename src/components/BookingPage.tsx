@@ -53,7 +53,12 @@ export default function BookingPage({availableTimes, dispatch}: BookingPageProps
         if(success){
             // console.log("Booking submitted successfully!")
             console.log(success,form);
-            navigate("/ConfirmedBooking");
+            
+            navigate("/ConfirmedBooking", {
+                state: {
+                    reservation: payload
+                }
+            });
             setForm(initialState)
         }
 
@@ -79,7 +84,7 @@ export default function BookingPage({availableTimes, dispatch}: BookingPageProps
                         <input aria-label='choose number of guests' aria-valuemin={1} aria-valuemax={10} data-testid="theNumberOfGuests" type="number" min={1} max={10} className='font-markazi border-2' id='numberOfGuests' name='numberOfGuests' value={form.numberOfGuests} onChange={handleChange} />
                     <label htmlFor='occasion' className='font-markazi text-4xl'>Occasion</label>
                         <select data-testid="occasionTest" name="occasion" className='font-markazi text-2xl rounded-3xl' id="occasion" value={form.occasion} onChange={handleChange}>
-                            {/* <option value="" className='bg-amber-100'>Select an occasion</option> */}
+                            <option value="" className='bg-amber-100'>Select an occasion</option>
                             <option value="birthday" className='bg-amber-200'>Birthday</option>
                             <option value="anniversary" className='bg-amber-300'>Anniversary</option>
                         </select>

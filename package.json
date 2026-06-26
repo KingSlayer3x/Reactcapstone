@@ -36,5 +36,18 @@
     "jsdom": "^29.1.1",
     "vite": "^7.1.2",
     "vitest": "^4.1.9"
-  }
+  },
+  "description": "HEAD\r # React + Vite",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KingSlayer3x/Reactcapstone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KingSlayer3x/Reactcapstone/issues"
+  },
+  "homepage": "https://github.com/KingSlayer3x/Reactcapstone#readme"
 }

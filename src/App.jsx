@@ -6,24 +6,11 @@ import BookingPage from "./components/BookingPage";
 import { useReducer } from "react";
 import ConfirmedBooking from "./components/ConfirmedBooking ";
 import BookingForm from "./components/BookingPage";
-function initialTimes(){
-    const today = new Date();
-    return window.fetchAPI(today);
-}
+import { initializeTimes, updateTimes } from "./components/timeReducer";
 
-function updateTimes(state, action) {
-    switch (action.type) {
-        case 'UPDATE_TIMES':{
-            const selectedDate = new Date(action.payload);
-            return window.fetchAPI(selectedDate);
-        }
-        default:
-            return state;
-    }
-}
 export default function Root(){
 
-    const [availableTimes, dispatch ] = useReducer(updateTimes, [], initialTimes);
+    const [availableTimes, dispatch ] = useReducer(updateTimes, [], initializeTimes);
     return(
         <div>
         <Navbar />

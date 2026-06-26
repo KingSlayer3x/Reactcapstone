@@ -83,7 +83,7 @@ export default function BookingPage({availableTimes, dispatch}: BookingPageProps
                             <option value="birthday" className='bg-amber-200'>Birthday</option>
                             <option value="anniversary" className='bg-amber-300'>Anniversary</option>
                         </select>
-                    <button aria-label='on click'  type='submit' disabled={!form.numberOfGuests || !form.time || !form.occasion } className='text-4xl rounded-2xl bg-amber-200 p-3 w-max text-center hover:bg-amber-300 hover:border-2 disabled:opacity-50 disabled:cursor-not-allowed'>
+                    <button aria-label='Book Now'  type='submit' disabled={!form.numberOfGuests || !form.time || !form.occasion } className='text-4xl rounded-2xl bg-amber-200 p-3 w-max text-center hover:bg-amber-300 hover:border-2 disabled:opacity-50 disabled:cursor-not-allowed'>
                         Book Now
                     </button>
             </fieldset>

@@ -5,7 +5,6 @@ import Footer from "./components/Footer";
 import BookingPage from "./components/BookingPage";
 import { useReducer } from "react";
 import ConfirmedBooking from "./components/ConfirmedBooking ";
-import BookingForm from "./components/BookingPage";
 import { initializeTimes, updateTimes } from "./components/timeReducer";
 
 export default function Root(){
@@ -16,7 +15,7 @@ export default function Root(){
         <Navbar />
         <Routes>
             <Route path="/" element={<Home />}/>
-            <Route path="/BookingPage" element={<BookingForm availableTimes={availableTimes} dispatch={dispatch}  />}/>
+            <Route path="/BookingPage" element={<BookingPage availableTimes={availableTimes} dispatch={dispatch}  />}/>
             <Route path="/ConfirmedBooking" element={<ConfirmedBooking />} />
         </Routes>
         <Footer />

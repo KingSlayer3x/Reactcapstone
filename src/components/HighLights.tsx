@@ -1,4 +1,4 @@
-import Card from "./card";
+import Card from "./Card";
 import { card } from "../utils/carddata";
 
 export default function HighLights(){
